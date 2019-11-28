@@ -19,7 +19,11 @@ class CreateHistorialEntregasTable extends Migration
             $table->integer('cantidad');
             $table->date('fechaVencimiento');
             $table->double('precioUnitario', 6, 2);
-            $table->double('precioTotal', 12, 2);                                    
+            $table->double('precioTotal', 12, 2);
+            $table->integer('producto_id')->unsigned();
+            $table->foreign('producto_id')->references('idProducto')->on('productos')->onDelete('cascade');
+            $table->integer('proveedor_id')->unsigned();
+            $table->foreign('proveedor_id')->references('idProveedor')->on('proveedors')->onDelete('cascade');
             $table->timestamps();
         });
     }

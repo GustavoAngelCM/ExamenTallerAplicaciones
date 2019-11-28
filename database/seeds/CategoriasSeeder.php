@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Illiminate\Support\Facades\DB;
+use Illuminate\Support\Facades\DB;
 
 class CategoriasSeeder extends Seeder
 {
